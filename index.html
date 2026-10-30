@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Man Panchani - Senior Flutter Developer with 4+ years of experience building end-to-end mobile applications for Android and iOS.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Man Panchani | Senior Flutter Developer</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#111c2e;--panel2:#15243a;--text:#eef5f7;--muted:#a8b7c8;--teal:#39d6bd;--line:rgba(255,255,255,.1);--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 5%,rgba(20,151,137,.15),transparent 28%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.4px}.brand span{color:var(--teal)}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover,.textlink:hover{color:var(--teal)}
+    .menu{display:none;background:none;color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:9px}
+    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:50px}.eyebrow{color:var(--teal);font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(42px,6vw,68px);line-height:1.08;letter-spacing:-2px;margin:16px 0}.hero h1 span{color:var(--teal)}.lead{font-size:18px;color:var(--muted);max-width:690px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:10px;font-weight:750;border:1px solid var(--line)}.primary{background:var(--teal);color:#06201e;border-color:var(--teal)}.secondary:hover{border-color:var(--teal)}
+    .hero-card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);padding:28px;border-radius:22px;box-shadow:0 25px 70px rgba(0,0,0,.2)}.monogram{width:78px;height:78px;border-radius:20px;background:rgba(57,214,189,.13);border:1px solid rgba(57,214,189,.35);display:grid;place-items:center;color:var(--teal);font-size:28px;font-weight:900;margin-bottom:22px}.stat{display:flex;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid var(--line);color:var(--muted)}.stat:last-child{border:0}.stat strong{color:var(--text)}
+    section{padding:72px 0;border-top:1px solid var(--line)}.section-head{margin-bottom:30px}.section-head h2{font-size:32px;margin:4px 0 8px;letter-spacing:-.7px}.section-head p{color:var(--muted);margin:0}
+    .about{max-width:850px;color:var(--muted);font-size:17px}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.chip{padding:8px 13px;border:1px solid var(--line);border-radius:999px;color:#d8e5ec;background:rgba(255,255,255,.025);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel),rgba(17,28,46,.72));border:1px solid var(--line);border-radius:17px;padding:24px;display:flex;flex-direction:column;min-height:245px}.card:hover{border-color:rgba(57,214,189,.5);transform:translateY(-2px);transition:.2s}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.app-icon{width:43px;height:43px;border-radius:12px;background:rgba(57,214,189,.12);display:grid;place-items:center;color:var(--teal);font-weight:900}.tag{font-size:11px;color:var(--teal);border:1px solid rgba(57,214,189,.3);padding:5px 9px;border-radius:99px}.card h3{font-size:21px;margin:18px 0 7px}.card p{color:var(--muted);margin:0 0 18px}.card a{color:var(--teal);font-weight:750;margin-top:auto}
+    .role-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.role-item{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:12px;color:#d6e2e9}.role-item:before{content:"✓";color:var(--teal);font-weight:900;margin-right:10px}
+    .contact-box{background:linear-gradient(120deg,rgba(57,214,189,.12),rgba(21,36,58,.8));border:1px solid rgba(57,214,189,.22);border-radius:20px;padding:30px}.contact-box p{color:var(--muted)}
+    footer{padding:28px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:70px 0 55px;gap:28px}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 22px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.grid,.role-list{grid-template-columns:1fr}section{padding:55px 0}.lead{font-size:16px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#home">MAN<span>.</span></a>
+  <button class="menu" id="menuBtn" aria-label="Toggle navigation">Menu</button>
+  <div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#role">My Role</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Senior Flutter Developer · 4+ Years Experience</div>
+      <h1>Building mobile<br><span>experiences that work.</span></h1>
+      <p class="lead">I'm Man Panchani, a Flutter Developer focused on building practical, reliable and production-ready mobile applications for Android and iOS — from understanding requirements to development, testing and release.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my projects</a><a class="btn secondary" href="#contact">Get in touch</a></div>
+    </div>
+    <aside class="hero-card">
+      <div class="monogram">MP</div>
+      <h2 style="margin:0 0 8px">Man Panchani</h2>
+      <p style="color:var(--muted);margin:0 0 18px">Flutter · Dart · Mobile Application Development</p>
+      <div class="stat"><span>Experience</span><strong>4+ Years</strong></div>
+      <div class="stat"><span>Published apps</span><strong>4 Google Play apps</strong></div>
+      <div class="stat"><span>Development scope</span><strong>End-to-End</strong></div>
+      <div class="stat"><span>Based in</span><strong>Surat, Gujarat, India</strong></div>
+    </aside>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Introduction</div><h2>About Me</h2><p>A hands-on approach to building complete mobile products.</p></div>
+    <p class="about">I am a Senior Flutter Developer with 4+ years of experience in mobile application development. I work across the application lifecycle, including requirement understanding, UI development, state management, API integration, local data handling, testing, debugging and release preparation. I enjoy turning business requirements into clear, maintainable and user-friendly mobile experiences.</p>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Technical Toolkit</div><h2>Skills & Technologies</h2><p>Tools and technologies used across my mobile development work.</p></div>
+    <div class="chips">
+      <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">GetX</span><span class="chip">REST API Integration</span><span class="chip">Firebase</span><span class="chip">SQLite</span><span class="chip">Hive</span><span class="chip">SharedPreferences</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MySQL</span><span class="chip">Supabase</span><span class="chip">Git & GitHub</span><span class="chip">Play Store Deployment</span>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Selected Work</div><h2>Published Applications</h2><p>Explore applications published on the Google Play Store.</p></div>
+    <div class="grid">
+      <article class="card"><div class="card-top"><div class="app-icon">M</div><span class="tag">Google Play</span></div><h3>Maavtyd</h3><p>Mobile application developed with Flutter. My contribution covered the end-to-end app development process, from implementation and integration through testing and release.</p><a href="https://play.google.com/store/apps/details?id=com.maavtydApp.getmaavtydApp" target="_blank" rel="noopener">View on Google Play ↗</a></article>
+      <article class="card"><div class="card-top"><div class="app-icon">S</div><span class="tag">Google Play</span></div><h3>Smart Schedule</h3><p>Scheduling and planning mobile application. Worked on the complete Flutter application lifecycle, including UI, application logic, integrations, testing and publishing.</p><a href="https://play.google.com/store/apps/details?id=com.smartScheduleApp.getsmartScheduleApp" target="_blank" rel="noopener">View on Google Play ↗</a></article>
+      <article class="card"><div class="card-top"><div class="app-icon">U</div><span class="tag">Google Play</span></div><h3>UniTask</h3><p>Task-focused mobile application. Responsible for end-to-end Flutter development, feature implementation, API connectivity, debugging and release preparation.</p><a href="https://play.google.com/store/apps/details?id=com.unitask.getUniTasks" target="_blank" rel="noopener">View on Google Play ↗</a></article>
+      <article class="card"><div class="card-top"><div class="app-icon">A</div><span class="tag">Google Play</span></div><h3>Uni Employee Attendance</h3><p>Employee attendance mobile application. Contributed to the complete app implementation, including camera and face-detection workflow integration, data handling, testing and release.</p><a href="https://play.google.com/store/apps/details?id=com.FaceAttendances.getUniEmployeeAttendance" target="_blank" rel="noopener">View on Google Play ↗</a></article>
+    </div>
+  </div></section>
+
+  <section id="role"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Ownership & Contribution</div><h2>My End-to-End Role</h2><p>Hands-on responsibility throughout the mobile application development lifecycle.</p></div>
+    <div class="role-list">
+      <div class="role-item">Understanding requirements and business workflows</div>
+      <div class="role-item">Planning application structure and implementation</div>
+      <div class="role-item">Developing responsive Flutter UI screens</div>
+      <div class="role-item">Implementing app logic and GetX state management</div>
+      <div class="role-item">Integrating REST APIs and backend services</div>
+      <div class="role-item">Working with local storage and databases</div>
+      <div class="role-item">Integrating required packages and device features</div>
+      <div class="role-item">Testing, debugging and performance improvements</div>
+      <div class="role-item">Preparing Android builds and release versions</div>
+      <div class="role-item">Supporting Google Play Store publishing and updates</div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact-box"><div class="eyebrow">Let's Connect</div><h2 style="font-size:32px;margin:8px 0">Have a project or opportunity?</h2><p>I'm open to discussing Flutter development opportunities, mobile application projects and collaborations.</p><div class="actions"><a class="btn primary" href="https://github.com/ManPanchani" target="_blank" rel="noopener">GitHub Profile</a><a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Add your LinkedIn URL</a></div><p style="font-size:13px;margin-bottom:0">Before publishing, replace the LinkedIn link with your actual profile and add your professional email if you want it displayed.</p></div>
+  </div></section>
+</main>
+<footer><div class="wrap"><span>© <span id="year"></span> Man Panchani. All rights reserved.</span><span>Designed & developed with Flutter developer mindset.</span></div></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn=document.getElementById('menuBtn'), links=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>
