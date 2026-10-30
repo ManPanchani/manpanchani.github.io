@@ -90,8 +90,8 @@
     .contact-link strong{font-size:11px;overflow-wrap:anywhere}
     footer{padding:22px 0;color:var(--muted);font:9px "DM Mono",monospace}
     .footer-inner{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.in{opacity:1;transform:none}
+    .reveal{opacity:1;transform:none;filter:none;transition:opacity .5s ease,transform .5s ease}
+    .reveal.in{opacity:1;transform:none;filter:none}
 
     /* Refined motion system: expressive, but restrained and accessible */
     body{background-image:radial-gradient(ellipse at 12% 0%,rgba(49,95,206,.055),transparent 34%),radial-gradient(ellipse at 92% 28%,rgba(49,95,206,.045),transparent 30%)}
@@ -114,7 +114,7 @@
     .chip:hover{transform:translateY(-3px);background:var(--accent-soft);color:var(--accent)}
     .section-head .eyebrow{display:inline-flex;align-items:center;gap:9px}
     .section-head .eyebrow:before{content:"";width:22px;height:1px;background:var(--accent);display:inline-block}
-    .reveal{opacity:0;transform:translateY(22px);filter:blur(2px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
+    .reveal{opacity:1;transform:none;filter:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
     .reveal.in{opacity:1;transform:translateY(0);filter:blur(0)}
     .reveal.from-left{transform:translateX(-22px);filter:blur(2px)}
     .reveal.from-left.in{transform:translateX(0);filter:blur(0)}
@@ -253,12 +253,8 @@
   
     /* Visibility fallback: content stays visible if animation scripts are blocked */
     .reveal,.reveal.from-left,.reveal.from-right{opacity:1;transform:none;filter:none}
-    body.motion-ready .reveal{opacity:0;transform:translateY(24px);filter:blur(2px)}
-    body.motion-ready .reveal.from-left{transform:translateX(-24px)}
-    body.motion-ready .reveal.from-right{transform:translateX(24px)}
-    body.motion-ready .reveal.in{opacity:1;transform:translate(0,0);filter:blur(0)}
     @media(prefers-reduced-motion:reduce){
-      body.motion-ready .reveal,body.motion-ready .reveal.from-left,body.motion-ready .reveal.from-right{opacity:1;transform:none;filter:none;transition:none}
+      body.motion-ready .reveal,body.motion-ready .reveal.from-left,
     }
 
   </style>
