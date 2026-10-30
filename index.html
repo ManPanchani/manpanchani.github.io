@@ -257,14 +257,70 @@
       body.motion-ready .reveal,body.motion-ready .reveal.from-left,
     }
 
+
+    /* Professional navigation and footer refinement */
+    .site-header{position:sticky;top:0;z-index:100;background:var(--header);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line);transition:box-shadow .25s ease,background .25s ease}
+    .site-header.scrolled{box-shadow:0 8px 28px rgba(12,25,45,.10)}
+    .site-nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand-lockup{display:inline-flex;align-items:center;gap:11px;min-width:190px}
+    .brand-mark{width:39px;height:39px;display:grid;place-items:center;border-radius:11px;background:var(--accent-soft);color:var(--accent);font-size:18px;font-weight:800;letter-spacing:-1px;border:1px solid var(--line)}
+    .brand-mark span{color:var(--ink)}
+    .brand-copy{display:grid;line-height:1.25;gap:4px}
+    .brand-copy strong{font-size:11px;letter-spacing:1.15px;font-weight:800}
+    .brand-copy small{font:8px "DM Mono",monospace;letter-spacing:1.1px;color:var(--muted)}
+    .navlinks{display:flex;align-items:center;gap:clamp(15px,2.3vw,28px);color:var(--muted);font-size:11px;font-weight:800}
+    .navlinks a{position:relative;padding:9px 0;transition:color .2s ease}
+    .navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;border-radius:2px;background:var(--accent);transition:right .25s ease}
+    .navlinks a:hover,.navlinks a.active{color:var(--ink)}
+    .navlinks a:hover:after,.navlinks a.active:after{right:0}
+    .navright{display:flex;align-items:center;gap:9px}
+    .header-cta{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border-radius:8px;background:var(--accent);color:white;font-size:10px;font-weight:800;transition:transform .2s ease,box-shadow .2s ease}
+    [data-theme="dark"] .header-cta{color:#101722}
+    .header-cta:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(49,95,206,.22)}
+    .theme{font-size:11px;padding:9px 10px}
+    .menu{font-size:17px;line-height:1;padding:8px 10px}
+    .site-footer{position:relative;margin-top:35px;padding:48px 0 18px;background:var(--paper);border-top:1px solid var(--line);overflow:hidden}
+    .site-footer:before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--accent),#8d7bff,transparent);opacity:.75}
+    .footer-main{display:grid;grid-template-columns:1.6fr .8fr .9fr auto;gap:35px;padding-bottom:35px}
+    .footer-brand p{margin:14px 0 0;color:var(--muted);font-size:11px;line-height:1.9}
+    .footer-label{display:block;margin-bottom:13px;color:var(--muted);font:9px "DM Mono",monospace;letter-spacing:1.4px}
+    .footer-nav,.footer-connect{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+    .footer-nav a,.footer-connect a{font-size:11px;font-weight:700;color:var(--muted);transition:color .2s ease,transform .2s ease}
+    .footer-nav a:hover,.footer-connect a:hover{color:var(--accent);transform:translateX(3px)}
+    .footer-connect a{display:flex;gap:12px;justify-content:space-between;width:100%}
+    .footer-connect a span{color:var(--accent)}
+    .back-top{width:54px;height:54px;border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:var(--accent);font-size:20px;font-weight:800;transition:background .2s ease,transform .2s ease}
+    .back-top small{font:7px "DM Mono",monospace;letter-spacing:.4px;color:var(--muted)}
+    .back-top:hover{background:var(--accent-soft);transform:translateY(-3px)}
+    .footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:17px;border-top:1px solid var(--line);color:var(--muted);font:9px "DM Mono",monospace;letter-spacing:.1px}
+    @media(max-width:760px){.site-nav{height:70px}.brand-lockup{min-width:0}.footer-main{grid-template-columns:1fr 1fr;gap:27px}.footer-brand{grid-column:1/-1}.back-top{justify-self:end;grid-column:2;grid-row:2}}
+    @media(max-width:600px){
+      .site-nav{height:66px;gap:10px}.brand-mark{width:35px;height:35px}.brand-copy strong{font-size:10px}.brand-copy small{font-size:7px}
+      .navright{gap:6px}.header-cta{display:none}.theme{padding:8px}.menu{display:block}
+      .navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:17px 20px 20px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 15px 25px rgba(12,25,45,.10);flex-direction:column;align-items:stretch;gap:5px}
+      .navlinks.open{display:flex}.navlinks a{padding:10px 4px}.navlinks a:after{display:none}
+      .footer-main{grid-template-columns:1fr 1fr;gap:24px}.footer-brand{grid-column:1/-1}.back-top{grid-column:2;grid-row:2}
+      .footer-bottom{font-size:8px;line-height:1.8;flex-direction:column;gap:5px}
+      .site-footer{padding-top:36px}
+    }
+
   </style>
 </head>
 <body>
 <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
-<header><div class="container"><nav>
-  <a class="brand" href="#top">MAN<span>.</span></a>
-  <div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
-  <div class="navright"><button class="theme" id="theme" aria-label="Toggle colour theme">☾ / ☼</button><button class="menu" id="menu" aria-label="Open menu">Menu</button></div>
+<header class="site-header"><div class="container"><nav class="site-nav" aria-label="Main navigation">
+  <a class="brand brand-lockup" href="#top" aria-label="Man Panchani home">
+    <span class="brand-mark">M<span>.</span></span>
+    <span class="brand-copy"><strong>MAN PANCHANI</strong><small>FLUTTER DEVELOPER</small></span>
+  </a>
+  <div class="navlinks" id="navlinks">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </div>
+  <div class="navright">
+    <a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    <button class="theme" id="theme" aria-label="Toggle colour theme" title="Toggle theme">☾ / ☼</button>
+    <button class="menu" id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  </div>
 </nav></div></header>
 <main id="top">
   <div class="container hero">
@@ -403,7 +459,34 @@
     </div>
   </div></section>
 </main>
-<footer><div class="container footer-inner"><span>© <span id="year"></span> Man Panchani</span><span>Designed and built with care.</span></div></footer>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand-lockup footer-lockup" href="#top">
+          <span class="brand-mark">M<span>.</span></span>
+          <span class="brand-copy"><strong>MAN PANCHANI</strong><small>SENIOR FLUTTER DEVELOPER</small></span>
+        </a>
+        <p>Building thoughtful mobile experiences<br>from idea to launch.</p>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-label">EXPLORE</span>
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#experience">Experience</a>
+      </div>
+      <div class="footer-connect">
+        <span class="footer-label">CONNECT</span>
+        <a href="mailto:manpanchani0511@gmail.com">Email me <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/man-panchani/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+        <a href="https://github.com/ManPanchani" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+      </div>
+      <a class="back-top" href="#top" aria-label="Back to top">↑<small>BACK TO TOP</small></a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Man Panchani. All rights reserved.</span>
+      <span>Designed &amp; developed with care in Gujarat, India.</span>
+    </div>
+  </div>
+</footer>
 <script>
   const root=document.documentElement,themeBtn=document.getElementById('theme');
   try{const saved=localStorage.getItem('man-theme');if(saved)root.dataset.theme=saved;}catch(e){}
@@ -416,14 +499,14 @@
   const header=document.querySelector('header');
   const menu=document.getElementById('menu');
   const links=document.getElementById('navlinks');
-  menu.addEventListener('click',()=>links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  menu.addEventListener('click',()=>{const isOpen=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(isOpen));menu.setAttribute('aria-label',isOpen?'Close navigation menu':'Open navigation menu');menu.textContent=isOpen?'×':'☰';});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu');menu.textContent='☰';}));
 
-  const progress=document.getElementById('pageProgressBar');
+  const progress=document.getElementById('progressBar');
   let scrollQueued=false;
   function updateScrollUI(){
     const max=document.documentElement.scrollHeight-window.innerHeight;
-    progress.style.width=(max>0?Math.min(100,window.scrollY/max*100):0)+'%';
+    if(progress)progress.style.width=(max>0?Math.min(100,window.scrollY/max*100):0)+'%';
     header.classList.toggle('scrolled',window.scrollY>12);
     scrollQueued=false;
   }
