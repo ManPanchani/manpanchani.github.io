@@ -250,6 +250,17 @@
     @media(max-width:760px){.hero{grid-template-columns:1fr;padding:65px 0;gap:25px}.about-grid,.contact{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:6px}}
     @media(max-width:600px){.container{width:calc(100% - 30px)}nav{height:64px}.menu{display:block}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;padding:17px 20px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:14px}.navlinks.open{display:flex}.hero{padding:55px 0}.skills,.projects,.responsibilities{grid-template-columns:1fr}section{padding:52px 0}h1{letter-spacing:-2px}.contact{padding:18px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+  
+    /* Visibility fallback: content stays visible if animation scripts are blocked */
+    .reveal,.reveal.from-left,.reveal.from-right{opacity:1;transform:none;filter:none}
+    body.motion-ready .reveal{opacity:0;transform:translateY(24px);filter:blur(2px)}
+    body.motion-ready .reveal.from-left{transform:translateX(-24px)}
+    body.motion-ready .reveal.from-right{transform:translateX(24px)}
+    body.motion-ready .reveal.in{opacity:1;transform:translate(0,0);filter:blur(0)}
+    @media(prefers-reduced-motion:reduce){
+      body.motion-ready .reveal,body.motion-ready .reveal.from-left,body.motion-ready .reveal.from-right{opacity:1;transform:none;filter:none;transition:none}
+    }
+
   </style>
 </head>
 <body>
@@ -432,7 +443,8 @@
       else if(index%3===2)el.classList.add('from-right');
     }
   });
-  if('IntersectionObserver' in window){
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.body.classList.add('motion-ready');
     const revealObserver=new IntersectionObserver(entries=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
